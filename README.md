@@ -11,7 +11,7 @@
 ### 测试方法
 
 ```bash
-python recognize.py --image test_image.png 
+python recognize.py --image test_image.png
 ```
 
 返回结果：
@@ -44,3 +44,8 @@ python recognize.py --image test_image.png
   }
 }
 ```
+
+### 补充说明
+
+1. 对于桌面上有多个窗口，可以申请百度多主体识别 API 使用，逐个检测。
+2. 目标检测和图片相似度对比算法比较成熟。如果自研，主体目标检测可以使用 OpenCV 或者 YOLOv3 的预训练模型，图片相似度对比可以使用感知哈希算法。
