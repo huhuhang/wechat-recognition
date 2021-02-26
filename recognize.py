@@ -1,6 +1,7 @@
 import json
 import base64
 import requests
+import argparse
 from PIL import Image
 from io import BytesIO
 
@@ -82,4 +83,8 @@ def lambda_handler(image):
     }
 
 
-print(lambda_handler("./test_image.png"))
+parser = argparse.ArgumentParser()
+parser.add_argument('--image', help='本地图像路径')
+
+args = parser.parse_args()
+print(lambda_handler(args.image))
